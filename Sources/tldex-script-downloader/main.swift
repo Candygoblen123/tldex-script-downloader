@@ -1,5 +1,9 @@
 import Foundation
 
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
+
 let video: String = CommandLine.arguments.indices.contains(1) ? CommandLine.arguments[1] : ""
 let outPath: String = CommandLine.arguments.indices.contains(2) ? CommandLine.arguments[2] : FileManager.default.currentDirectoryPath.appending("/TLDex.srt")
 
